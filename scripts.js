@@ -15,4 +15,11 @@ function getComputerChoice() {
     }
 }
 
-console.log(getComputerChoice());
+console.log(`The computer chose: ${getComputerChoice()}`);
+
+function getHumanChoice() {
+    let choice = prompt("Tell me your choice.");
+    return "Your choice was: " + choice;
+}
+
+console.log(getHumanChoice());
