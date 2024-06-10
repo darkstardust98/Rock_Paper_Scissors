@@ -17,7 +17,7 @@ function getComputerChoice() {
 
 function getHumanChoice() {
     let choice = prompt("Tell me your choice.");
-    return "Your choice was: " + choice;
+    return choice;
 }
 
 let humanScore = 0;
@@ -36,7 +36,7 @@ function playRound(humanChoice, computerChoice) {
             return "Both players chose the same. This is a tie.";
         } else if (computerChoice === "Scissors") {
             humanScore++;
-            return "Congratulation your Rock smashed the computer's Scissors!"
+            return "Congratulations your Rock smashed the computer's Scissors!"
         } else if (computerChoice === "Paper") {
             computerScore++;
             return "That's a shame... The computer's Paper wrapped around your Rock!"
@@ -48,7 +48,7 @@ function playRound(humanChoice, computerChoice) {
             return "Both players chose the same. This is a tie.";
         } else if (computerChoice === "Rock") {
             humanScore++;
-            return "Congratulation your Paper wrapped around the computer's Rock!"
+            return "Congratulations your Paper wrapped around the computer's Rock!"
         } else if (computerChoice === "Scissors") {
             computerScore++;
             return "That's a shame... The computer's Scissors cut your Paper in pieces!"
@@ -59,7 +59,7 @@ function playRound(humanChoice, computerChoice) {
             return "Both players chose the same. This is a tie.";
         } else if (computerChoice === "Paper") {
             humanScore++;
-            return "Congratulation your Scissors cut the computer's Paper to pieces!"
+            return "Congratulations your Scissors cut the computer's Paper to pieces!"
         } else if (computerChoice === "Rock") {
             computerScore++;
             return "That's a shame... The computer's Rock smashed your Scissors!"
@@ -72,4 +72,4 @@ function playRound(humanChoice, computerChoice) {
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
-console.log(playRound());
+console.log(playRound(humanSelection, computerSelection));
