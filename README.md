@@ -32,3 +32,11 @@ TRASNFORM getHumanChoice to lower case
 TRANSFORM the first letter of getHumanChoice to upper case
 COMPARE the choices 
 DECLARE a winner via if-else statement
+
+
+playGame
+.
+CALL playround for 5 times via for loop\
+INCREMENT player of computer score each round
+DETERMINE the winner as soon as a player reaches 3 in score via else-if statement
+
