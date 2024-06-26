@@ -76,6 +76,7 @@ function playGame() {
 
     }
 
+    // LOGIC DEPRECATED SINCE MOVE ON TO UI BASED GAME
     // for (let i = 0; i < 5; i++) {
     //     let humanRoundSelection = getHumanChoice();
     //     let computerRoundSelection = getComputerChoice();
@@ -94,29 +95,34 @@ function playGame() {
         return `Both players scored the same with a result of ${humanScore} to ${computerScore}, so this game is a tie.`;
     } else return "An unexpected error occured.";
 
-}
+    document.getElementById("computer-selection").innerText = computerSelection;
+    document.getElementById("game-result").innerText = humanScore + " to " + computerScore;
 
-console.log(playGame());
+}
 
 
 //EVENT LISTENERS
+document.getElementById("start-game").addEventListener("click", playGame);
+
 document.getElementById("rock").addEventListener("click", 
     function() {
-        alert("You chose Rock!");
+        // alert("You chose Rock!");
         document.getElementById("player-selection").innerText = "Scissors";
     }
 )
 
 document.getElementById("paper").addEventListener("click", 
     function() {
-        alert("You chose Paper!");
+        // alert("You chose Paper!");
         document.getElementById("player-selection").innerText = "Paper";
     }
 )
 
 document.getElementById("scissors").addEventListener("click", 
     function() {
-        alert("You chose Scissors!");
+        // alert("You chose Scissors!");
         document.getElementById("player-selection").innerText = "Scissors";
     }
 )
+
+
