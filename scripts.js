@@ -103,17 +103,20 @@ console.log(playGame());
 document.getElementById("rock").addEventListener("click", 
     function() {
         alert("You chose Rock!");
+        document.getElementById("player-selection").innerText = "Scissors";
     }
 )
 
 document.getElementById("paper").addEventListener("click", 
     function() {
         alert("You chose Paper!");
+        document.getElementById("player-selection").innerText = "Paper";
     }
 )
 
 document.getElementById("scissors").addEventListener("click", 
     function() {
         alert("You chose Scissors!");
+        document.getElementById("player-selection").innerText = "Scissors";
     }
 )
