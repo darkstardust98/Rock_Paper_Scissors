@@ -15,19 +15,10 @@ function getComputerChoice() {
     }
 }
 
-
 let humanScore = 0;
 let computerScore = 0;
-// function getHumanChoice() {
-//     let choice = prompt("Tell me your choice.");
-//     return choice;
-// }
 
-// const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
-
-// console.log(playRound(humanSelection, computerSelection));
-
 
 function playRound(humanChoice, computerChoice) {
     if (typeof humanChoice === 'string') {
@@ -42,37 +33,37 @@ function playRound(humanChoice, computerChoice) {
     // Player choice Rock scenario
     if (humanChoice === "Rock") {
         if (computerChoice === "Rock") {
-            return "Both players chose the same. This is a tie.";
+            return;
         } else if (computerChoice === "Scissors") {
             humanScore++;
-            return "Congratulations your Rock smashed the computer's Scissors!"
+            return;
         } else if (computerChoice === "Paper") {
             computerScore++;
-            return "That's a shame... The computer's Paper wrapped around your Rock!"
-        } else return "Something went wrong. Try again."
+            return;
+        };
 
     // Player choice Paper scenario
     } else if (humanChoice === "Paper") {
         if (computerChoice === "Paper") {
-            return "Both players chose the same. This is a tie.";
+            return;
         } else if (computerChoice === "Rock") {
             humanScore++;
-            return "Congratulations your Paper wrapped around the computer's Rock!"
+            return;
         } else if (computerChoice === "Scissors") {
             computerScore++;
-            return "That's a shame... The computer's Scissors cut your Paper in pieces!"
-        }
+            return;
+        };
     // Player choice Scissors scenario
     } else if (humanChoice === "Scissors") {
         if (computerChoice === "Scissors") {
-            return "Both players chose the same. This is a tie.";
+            return;
         } else if (computerChoice === "Paper") {
             humanScore++;
-            return "Congratulations your Scissors cut the computer's Paper to pieces!"
+            return;
         } else if (computerChoice === "Rock") {
             computerScore++;
-            return "That's a shame... The computer's Rock smashed your Scissors!"
-        } else return "Something went wrong. Try again."
+            return;
+        };
 
     } else return "Something went wrong, try again.";
 
@@ -87,7 +78,7 @@ document.getElementById("rock").addEventListener("click",
         humanChoice = "Rock";
         computerChoice = getComputerChoice();
         document.getElementById("player-selection").innerText = "Rock";
-        document.getElementById("computer-selection").innerText = getComputerChoice();
+        document.getElementById("computer-selection").innerText = computerChoice;
         playRound(humanChoice, computerChoice);
         document.getElementById("game-result").innerText = `${humanScore} to ${computerScore}`;
         checkScore();
@@ -100,7 +91,7 @@ document.getElementById("paper").addEventListener("click",
         humanChoice = "Paper";
         computerChoice = getComputerChoice();
         document.getElementById("player-selection").innerText = "Paper";
-        document.getElementById("computer-selection").innerText = getComputerChoice();
+        document.getElementById("computer-selection").innerText = computerChoice;
         playRound(humanChoice, computerChoice);
         document.getElementById("game-result").innerText = `${humanScore} to ${computerScore}`;
         checkScore();
@@ -113,7 +104,7 @@ document.getElementById("scissors").addEventListener("click",
         humanChoice = "Scissors";
         computerChoice = getComputerChoice();
         document.getElementById("player-selection").innerText = "Scissors";
-        document.getElementById("computer-selection").innerText = getComputerChoice();
+        document.getElementById("computer-selection").innerText = computerChoice;
         playRound(humanChoice, computerChoice);
         document.getElementById("game-result").innerText = `${humanScore} to ${computerScore}`;
         checkScore();
