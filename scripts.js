@@ -20,7 +20,7 @@ function getHumanChoice() {
     return choice;
 }
 
-const humanSelection = getHumanChoice();
+// const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
 // console.log(playRound(humanSelection, computerSelection));
@@ -76,11 +76,11 @@ function playGame() {
 
     }
 
-    for (let i = 0; i < 5; i++) {
-        let humanRoundSelection = getHumanChoice();
-        let computerRoundSelection = getComputerChoice();
-        console.log(playRound(humanRoundSelection, computerRoundSelection));
-    }
+    // for (let i = 0; i < 5; i++) {
+    //     let humanRoundSelection = getHumanChoice();
+    //     let computerRoundSelection = getComputerChoice();
+    //     console.log(playRound(humanRoundSelection, computerRoundSelection));
+    // }
 
     if (humanScore >= 3) {
         return `Congratulations, you won ${humanScore} rounds this game and thus have won!`;
@@ -97,3 +97,23 @@ function playGame() {
 }
 
 console.log(playGame());
+
+
+//EVENT LISTENERS
+document.getElementById("rock").addEventListener("click", 
+    function() {
+        alert("You chose Rock!");
+    }
+)
+
+document.getElementById("paper").addEventListener("click", 
+    function() {
+        alert("You chose Paper!");
+    }
+)
+
+document.getElementById("scissors").addEventListener("click", 
+    function() {
+        alert("You chose Scissors!");
+    }
+)
